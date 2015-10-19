@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My-template - Free bootstrap 3 one page template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Font Awesome -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+    <!-- Animation -->
+	<link href="css/animate.css" rel="stylesheet" />
+	
+    <!-- MyTemplate CSS -->
+    <link href="css/style.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<header id="header-banner">
+		<nav class="navbar navbar-default navbar-fixed-top fadeIn" role="navigation">
+			<div class="container">
+				
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dropdown-box-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="navbar-brand">
+						<a href="#">TARS</a>
+					</div>
+				</div>
+				
+				<!-- Collect the nav links and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="dropdown-box-1">
+					
+					<ul class="nav navbar-nav">
+						<li><a href="#aboutus">OVERVIEW</a></li>
+						<li class="dropdown" role="presentation">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							  FEATURES <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu bullet fadeIn" role="menu">
+							  <li><a href="#first">Self-Navigation</a></li>
+							  <li><a href="#second">Graphical User Interface</a></li>
+							  <li><a href="#third">Client-Server Architecture</a></li>
+							  <li><a href="#fourth">Analysis of Visual Inputs</a></li>
+							</ul>
+						</li>
+						<li><a href="#technologies">COMPONENTS AND TECHNOLOGIES USED</a></li>
+						<li><a href="#contactus">CONTACT</a></li>
+					</ul>
+					
+				</div>
+				
+			</div> <!-- /.container -->
+		</nav> <!-- /.nav -->
+	</header>
+		
+	<!-- banner -->
+    <section class="banner" id="home">
+		<div class="container">
+			<div class="slogan">
+				<h2>TARS </h2>
+				<h4>A SELF-NAVIGATING ROBOT </h4>
+			</div>
+			
+			<div class="btn-circle-scroll fadeIn">
+				<a href="#section-footer" class="btn-circle">
+					<i class="fa fa-angle-double-down animated"></i>
+				</a>
+			</div>
+			
+		</div>
+    </section>
+	<!-- /.banner -->
+
+	<!-- aboutus -->
+    <section class="aboutus" id="aboutus">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="wow bounceInLeft" data-wow-delay="0.1s"> 
+						<h2>Overview</h2> 
+					</div>
+					<div class="col-sm-7">
+						<p>
+							TARS is a mini-robot controlled by a raspberry pi, that navigates using either manual control or artificial intelligence. 
+														
+						</p>
+						<p>
+							It has a 5MP camera, that it uses to take pictures, which are stored, and then at the end of the path, is compiled to form a video of the shortest
+							path or the complete path taken by the bot.
+						</p>
+					</div>
+					<div class="col-sm-5">
+						<div class="img-aboutus">
+							<div class="wow fadeIn" data-wow-delay="0.2s">
+								<img src="img/aboutus.jpg" alt="" class="img-responsive img-rounded" />
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+	<!-- /.aboutus -->
+	
+	<!-- services -->
+    <section class="services" id="services">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="wow bounceInLeft" data-wow-delay="0.1s">
+					<h2>Features of TARS</h2>
+					</div>
+				</div>				
+			</div>
+			
+			<div class="row-padded" id = "first"></div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-sm-7">
+						<h4>Self-Navigation</h4>
+						<p>
+							On this mode, the bot searches for the shortest path to the given destination, using A-star search algorithm.
+							It looks for obstacles in all directions, at each new point in its path, using its ultrasonic sensor and avoids them when 
+							they are within a certain threshold defined. 
+						</p>
+						<p>
+							All the parameters of the bot's movement are configurable: This includes the starting point, the destination, the speed with
+							which the bot moves, the heauristics that the bot uses to gauge the shortest path and the display parameters.
+						</p>
+					</div>
+					
+					<div class="col-sm-5">
+						<div class="avatar">
+							<div class="wow fadeIn" data-wow-delay="0.2s">
+								<video width="500" height="375" controls="controls"> 
+								<source src="video/convertedVido.mp4" type="video/mp4"> 
+								<object data="" width="500" height="375"> 
+								<embed width="500" height="375" src="video/convertedVido.mp4"> 
+								</object> 
+								</video>
+							</div>
+						</div>
+					</div>
+				</div>	
+				
+			</div>
+			
+			
+			
+			<div class="row-padded" id="second"></div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-sm-7">
+						<h4>GRAPHICAL USER INTERFACE</h4>
+						<p>
+							This is a graphical interface/application to TARS, which is an easygui based menu driven interface that allows run-time configuration of variables, like the speed
+							with which TARS moves, the starting and ending points, etc. It also has a radar which tracks the bot movement and renders it on client display.
+							Once the parameters have been set, TARS can be deployed can be run from the application and its navigational path will be displayed.
+						</p>
+						<p>
+							This includes a visual display of the path that TARS is sketching out in its search for the destination.
+							The Blue colour shows all the paths/blocks traversed by TARS
+							The Green colour shows the obstacles it faced on its way
+							The Yellow colour shows the final shortest path it takes to the destination from the origin
+						</p>
+					</div>
+					
+					<div class="col-sm-5">
+						<div class="avatar">
+							<div class="wow fadeIn" data-wow-delay="0.2s">
+							<img src="img/services/2.jpg" alt="" class="img-responsive img-rounded" />
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			
+			<div class="row-padded" id="third"></div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-sm-7">
+						<h4>CLIENT-SERVER ARCHITECTURE</h4>
+						<p>
+							In order to have a clean and robust design, and lower the use of computational resources of the Raspberry pi, we have
+							employed a Client-Server architecture for TARS. The Raspberry Pi on TARS acts as the server while a client can be any device
+							on the network capable of running it. Both communicate via socket programming. On starting the application, the client sends
+							requests to the server, regarding the next step to be taken (move, look for obstacle, take a picture), and the Server on performing
+							the task sends the appropriate response.
+							
+						</p>
+						<p>
+							The main computational tasks of the algorithm are taken care of at the client, with only the instructions related to the bot's movement,
+							obstacles, and taking pictures being communicated to the server. This has greatly reduced the load of computation on the Raspberry pi, which
+							has limited memory of 512 MB only.
+						</p>
+					</div>
+					
+					<div class="col-sm-5">
+						<div class="avatar">
+							<div class="wow fadeIn" data-wow-delay="0.2s">
+							<img src="img/client-serverTARS.jpg" alt="" class="img-responsive img-rounded" />
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			
+			<div class="row-padded" id="fourth"></div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-sm-7">
+						<h4>ANALYSIS OF VISUAL INPUTS</h4>
+						<p>
+							TARS has a 5 megapixel camera, which is used to take pictures at regular intervals, during the robot's navigation, which are then
+							analyzed.
+							For example, on the AI mode, when TARS reaches the destination, the client compiles all the pictures, taken at points on the shortest path, 
+							and combines them to form a video representation of the path traversed by the robot.
+						</p>
+					</div>
+					
+					<div class="col-sm-5">
+						<div class="avatar">
+							<div class="wow fadeIn" data-wow-delay="0.2s">
+							<img src="img/services/3.jpg" alt="" class="img-responsive img-rounded" />
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+
+		
+		</div>
+	</section>
+	<!-- /.services -->
+	
+	<section class="services" id="technologies">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="wow bounceInLeft" data-wow-delay="0.1s">
+					<h2>Technologies and components used</h2>
+					</div>
+				</div>				
+			</div>
+			
+			<div class="row-padded" id="components"></div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-sm-7">
+						<h4>Components of TARS</h4>
+							<p>1. Raspberry pi<br>
+							2. Robot kit- including framework with wheels, motor, motor controller board etc<br>
+							3. Ultrasonic sensor<br>
+							4. 5 MP Camera							
+							
+							</p>
+							
+					</div>
+				</div>				
+			</div>
+			
+			<div class="row-padded" id="technologies"></div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-sm-7">
+						<h4>Technologies Used</h4>
+							<p>1. Language : Python<br>
+							2. Server OS : Debian/Linux<br>
+							3. Client OS : Linux/Windows<br>
+							4. Third party : pygame, easyGUI, RPi.GPIO 
+						
+							</p>
+					</div>
+				</div>				
+			</div>
+			
+			
+		</div>
+	
+	</section>
+	
+	
+	<!-- contact us -->
+	<section class="contactus" id="contactus">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="wow bounceInLeft" data-wow-delay="0.1s">
+					<h2>Get in touch</h2>
+					</div>
+					<div class="col-sm-8">
+						<form class="my-form" role="form" action="MAILTO:niharika.dutta91@gmail.com" method="post" enctype="text/plain">
+						  <div class="form-group">
+							<input type="text" class="form-control" id="name" placeholder="Your name">
+						  </div>
+						  <div class="form-group">
+							<input type="email" class="form-control" id="email" placeholder="Your mail">
+						  </div>
+						  <div class="form-group">
+							<textarea class="form-control" name="message" id="message" rows="7" cols="25" style="resize:none;" required="required" placeholder="Message"></textarea>
+						  </div>
+						  
+						  <button type="submit" class="btn btn-default btn-block">SEND MESSAGE</button>
+						</form>
+					</div>
+					
+					<div class="col-sm-4">
+						<div class="physical-address">
+						<h4>Contact us</h4>
+						<p>We are two computer science graduates with interest in Artificial Intelligence, Machine learning and Deep learning. This is a side project driven by curiosity. For any query, feel free to contact us at :-</p>
+						<br>
+
+						<address>
+						  Niharika Dutta: <br>
+						  Email: <a href="mailto:info@example.com">niharika.dutta91@gmail.com</a><br>
+						  Github profile: <a href="https://github.com/Niharikadutta">Niharikadutta</a><br><br>
+						  Abhimanyu Dogra: <br>
+						  Email: <a href="mailto:info@example.com">dograabhimanyu@gmail.com</a><br>
+						  Github profile: <a href="https://github.com/abhimanyudogra">abhimanyudogra</a><br>
+						  Website: <a href="http://abhimanyudogra.github.io/">Abhimanyu's Lair</a>
+						</address>	
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+	<!-- /.contact us -->
+	
+	<!-- footer -->
+	<footer id="section-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="wow fadeIn" data-wow-delay="0.4s">
+						<div class="btn-circle-scroll">
+							<a href="#header-banner" class="btn-circle">
+								<i class="fa fa-angle-double-up animated"></i>
+							</a>
+						</div>
+			</div>	
+		</div>
+	</footer>
+	<!-- /.footer -->
+	
+	
+	<!-- Core JavaScript Files -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>	
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/wow.min.js"></script>			<!-- Reveal animation when you scroll by wow.js. It need animate.css library -->
+	<!-- Custom Theme JavaScript -->
+	<script src="js/custom.js"></script>
+
+</body>
+
+</html>
