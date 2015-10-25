@@ -100,14 +100,14 @@
 					<div class="col-sm-7">
 						<p>
 							TARS is a robot, currently under development by two Computer Science gradutes for research as well as recreational purposes.
-							The prime purpose of the bot is navigation which is either self-driven via A.I. algorithms or manual. 
+							The prime speciality of the bot is navigation which is either self or manually driven. 
 						</p>
 						<p>
 							The bot is capable of taking visual feedback from the surroundings using a camera, and perform analysis on the images using
 							Machine Learning as well as other image based algorithms.
 						</p>
 						<p>
-							The TARS software supports user friendly GUI, allowing the user to customize a wide array of variable to control the
+							The TARS software supports user friendly GUI, allowing the user to customize a wide array of variables to control the
 							behavior of the bot as well as the GUI itself. We have also implemented a radar into the software which allows the user
 							to track the bot remotely.														
 						</p>
@@ -146,12 +146,12 @@
 					<div class="col-sm-7">
 						<h4>Artificial Intelligence</h4>
 						<p>
-							We have coded several known A.I. search algorithms like A* and Breadth First Search et cetera. As TARS 
-							navigates, it may encounter obstacles which is where these algorithms come in. At each node, these algorithms help TARS 
-							to intelligently and patience compute the next steps in its path.
+							We have coded several known AI search algorithms like A* and Breadth First Search et cetera. As TARS 
+							navigates, it may encounter obstacles which is where it uses these algorithms for path recomputation.
+							At each node, these algorithms help TARS to intelligently figure out the next steps in its path.
 						</p>
 						<p>
-							TARS plots its surroundings on a square graph upon which the A.I. algorithms are deployed. Every step signifies a new node and
+							TARS plots its surroundings on a square graph upon which the AI algorithms are deployed. Every step signifies a new node and
 							the distance between each node is customizable. If a node is blocked by an obstacle, TARS doesn't give up on it, rather it 
 							tries to reach that node from the other three sides before ruling it out as a possible option.
 						</p>
@@ -189,10 +189,10 @@
 						<h4>GRAPHICAL USER INTERFACE</h4>
 						<p>
 							For a simple and user friendly experience, TARS software has an easygui based menu driven interface. The main menu allows user
-							to connect the client application to the Raspberry Pi, configure runtime varibles to control the algorithms or bot behavior and
-							of course, deploy the algorithms to initiate the search procedure. When deployed, a radar is displayed to the user, which tracks the movements of the bot as well as the obstacles encountered 
-							and keeps a log of the nodes that have been visited. After a successful search, the radar highlights the shortest path
-							calculated via the algorithm and runs the compiled video of the path.<br>
+							to connect the client application to the Raspberry Pi, configure runtime variables to control the algorithm or bot behavior and
+							of course, deploy the algorithm to initiate the search procedure. When deployed, a radar is displayed to the user, which tracks 
+							the movements of the bot as well as the obstacles encountered and keeps a log of the nodes that have been visited. After a successful 
+							search, the radar highlights the shortest path calculated via the algorithm and runs the compiled video of the path.<br>
 							Radar legend :<br>
 							Red : Destination<br>
 							Blue : Current TARS position<br>
@@ -223,14 +223,14 @@
 						<p>
 							In order to have a clean and robust design, and lower the use of computational resources of the Raspberry pi, we have
 							employed a Client-Server architecture for TARS. It is equipped with a WI-FI adapter which allows it to communicate over the
-							the network. The server and client side interfaces are designed from scratch using python socket programming. These communicate
+							the network. The server and client side interfaces are designed from scratch using python socket programming. They communicate
 							using a simple custom protocol for sending and receiving messages.
 							
 						</p>
 						<p>
 							The main computational tasks of the algorithm are taken care of at the client, with only the instructions related to the bot's 
-							movement, obstacle detectoion and camera being communicated to the server. This keeps the workload off the 700MHz processor of 
-							the RPi, leaving the majority of resource hungry tasks to the more capable machine of the client.
+							movement, obstacle detection and camera being communicated to the server. This keeps the workload off the 700MHz processor of 
+							the RPi, leaving the majority of resource-hungry tasks to the more capable machine of the client.
 						</p>
 					</div>
 					
@@ -257,8 +257,8 @@
 						<p>
 							Currently, We use Emmy award winning SSIM index algorithm to find similarities between two images that allows the bot
 							to recognize destination and possibly other objects in near future. 
-							Other algorith that TARS uses is K-means clustering machine learning algorthim that allows it to quantize colors in the images
-							into clusters, and then matching them with the target data.
+							Another algorithm that TARS uses is K-means clustering machine learning algorthim that allows it to quantize colors in the images
+							into clusters, and then match them with the target data.
 						</p>
 					</div>
 					
