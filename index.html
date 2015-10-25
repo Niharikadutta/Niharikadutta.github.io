@@ -52,14 +52,14 @@
 							  FEATURES <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu bullet fadeIn" role="menu">
-							  <li><a href="#first">Self-Navigation</a></li>
+							  <li><a href="#first">Artificial Intelligene</a></li>
 							  <li><a href="#second">Graphical User Interface</a></li>
 							  <li><a href="#third">Client-Server Architecture</a></li>
-							  <li><a href="#fourth">Analysis of Visual Inputs</a></li>
+							  <li><a href="#fourth">Optical sensing</a></li>
 							</ul>
 						</li>
-						<li><a href="#technologies">COMPONENTS AND TECHNOLOGIES USED</a></li>
-						<li><a href="#contactus">CONTACT</a></li>
+						<li><a href="#technologies">COMPONENTS AND TECHNOLOGIES</a></li>
+						<li><a href="#contactus">ABOUT US</a></li>
 					</ul>
 					
 				</div>
@@ -73,7 +73,7 @@
 		<div class="container">
 			<div class="slogan">
 				<h2>TARS </h2>
-				<h4>A SELF-NAVIGATING ROBOT </h4>
+				<h4>A Self-driving bot</h4>
 			</div>
 			
 			<div class="btn-circle-scroll fadeIn">
@@ -96,18 +96,26 @@
 					</div>
 					<div class="col-sm-7">
 						<p>
-							TARS is a mini-robot controlled by a raspberry pi, that navigates using either manual control or artificial intelligence. 
-														
+							TARS is a robot, currently under development by two Computer Science gradutes for research as well as recreational purposes.
+							The prime purpose of the bot is navigation which is either self-driven via A.I. algorithms or manual. 
 						</p>
 						<p>
-							It has a 5MP camera, that it uses to take pictures, which are stored, and then at the end of the path, is compiled to form a video of the shortest
-							path or the complete path taken by the bot.
+							The bot is capable of taking visual feedback from the surroundings using a camera, and perform analysis on the images using
+							Machine Learning as well as other image based algorithms.
+						</p>
+						<p>
+							The TARS software supports user friendly GUI, allowing the user to customize a wide array of variable to control the
+							behavior of the bot as well as the GUI itself. We have also implemented a radar into the software which allows the user
+							to track the bot remotely.														
+						</p>
+						<p>
+							TARS is also capable of avoiding obstacles using an ultrasonic sensor and is powered by a power bank making it completely mobile.
 						</p>
 					</div>
 					<div class="col-sm-5">
 						<div class="img-aboutus">
 							<div class="wow fadeIn" data-wow-delay="0.2s">
-								<img src="img/aboutus.jpg" alt="" class="img-responsive img-rounded" />
+								<img src="img/tars.jpg" alt="" class="img-responsive img-rounded" />
 							</div>
 						</div>
 					</div>
@@ -124,7 +132,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="wow bounceInLeft" data-wow-delay="0.1s">
-					<h2>Features of TARS</h2>
+					<h2>FEATURES</h2>
 					</div>
 				</div>				
 			</div>
@@ -133,15 +141,23 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="col-sm-7">
-						<h4>Self-Navigation</h4>
+						<h4>Artificial Intelligence</h4>
 						<p>
-							On this mode, the bot searches for the shortest path to the given destination, using A-star search algorithm.
-							It looks for obstacles in all directions, at each new point in its path, using its ultrasonic sensor and avoids them when 
-							they are within a certain threshold defined. 
+							We have coded several known A.I. search algorithms like A* and Breadth First Search et cetera. As TARS 
+							navigates, it may encounter obstacles which is where these algorithms come in. At each node, these algorithms help TARS 
+							to intelligently and patience compute the next steps in its path.
 						</p>
 						<p>
-							All the parameters of the bot's movement are configurable: This includes the starting point, the destination, the speed with
-							which the bot moves, the heauristics that the bot uses to gauge the shortest path and the display parameters.
+							TARS plots its surroundings on a square graph upon which the A.I. algorithms are deployed. Every step signifies a new node and
+							the distance between each node is customizable. If a node is blocked by an obstacle, TARS doesn't give up on it, rather it 
+							tries to reach that node from the other three sides before ruling it out as a possible option.
+						</p>
+						<p>
+							We are currently researching the efficiency of different flavors of heauristics in A* search algorithm under various scenarios
+							to find optimal coefficients for fastest destination search. Our software makes the task easier as the coefficients are 
+							easily customizable via the GUI menus.<br>
+							For example - Manhattan distance heuristic : f(n) = &alpha;*g(n) + &beta;*h(n)<br>
+							where &alpha; and &beta; are varied.
 						</p>
 					</div>
 					
@@ -169,24 +185,29 @@
 					<div class="col-sm-7">
 						<h4>GRAPHICAL USER INTERFACE</h4>
 						<p>
-							This is a graphical interface/application to TARS, which is an easygui based menu driven interface that allows run-time configuration of variables, like the speed
-							with which TARS moves, the starting and ending points, etc. It also has a radar which tracks the bot movement and renders it on client display.
-							Once the parameters have been set, TARS can be deployed can be run from the application and its navigational path will be displayed.
-						</p>
-						<p>
-							This includes a visual display of the path that TARS is sketching out in its search for the destination.
-							The Blue colour shows all the paths/blocks traversed by TARS
-							The Green colour shows the obstacles it faced on its way
-							The Yellow colour shows the final shortest path it takes to the destination from the origin
+							For a simple and user friendly experience, TARS software has an easygui based menu driven interface. The main menu allows user
+							to connect the client application to the Raspberry Pi, configure runtime varibles to control the algorithms or bot behavior and
+							of course, deploy the algorithms to initiate the search procedure. When deployed, a radar is displayed to the user, which tracks the movements of the bot as well as the obstacles encountered 
+							and keeps a log of the nodes that have been visited. After a successful search, the radar highlights the shortest path
+							calculated via the algorithm and runs the compiled video of the path.<br>
+							Radar legend :<br>
+							Red : Destination<br>
+							Blue : Current TARS position<br>
+							Dark Blue : Visited nodes<br>
+							Green : Obstacles<br>
+							Yellow : Nodes of the shortest path<br>
 						</p>
 					</div>
 					
 					<div class="col-sm-5">
-						<div class="avatar">
-							<div class="wow fadeIn" data-wow-delay="0.2s">
-							<img src="img/services/2.jpg" alt="" class="img-responsive img-rounded" />
+						<div class="wow fadeIn" data-wow-delay="0.2s">
+								<video width="500" height="375" controls="controls"> 
+								<source src="video/tarsGUI.mp4" type="video/mp4"> 
+								<object data="video/tarsGUI.mp4" width="500" height="375"> 
+								<embed width="500" height="375" src="video/tarsGUI.mp4"> 
+								</object> 
+								</video>
 							</div>
-						</div>
 					</div>
 				</div>				
 			</div>
@@ -198,16 +219,15 @@
 						<h4>CLIENT-SERVER ARCHITECTURE</h4>
 						<p>
 							In order to have a clean and robust design, and lower the use of computational resources of the Raspberry pi, we have
-							employed a Client-Server architecture for TARS. The Raspberry Pi on TARS acts as the server while a client can be any device
-							on the network capable of running it. Both communicate via socket programming. On starting the application, the client sends
-							requests to the server, regarding the next step to be taken (move, look for obstacle, take a picture), and the Server on performing
-							the task sends the appropriate response.
+							employed a Client-Server architecture for TARS. It is equipped with a WI-FI adapter which allows it to communicate over the
+							the network. The server and client side interfaces are designed from scratch using python socket programming. These communicate
+							using a simple custom protocol for sending and receiving messages.
 							
 						</p>
 						<p>
-							The main computational tasks of the algorithm are taken care of at the client, with only the instructions related to the bot's movement,
-							obstacles, and taking pictures being communicated to the server. This has greatly reduced the load of computation on the Raspberry pi, which
-							has limited memory of 512 MB only.
+							The main computational tasks of the algorithm are taken care of at the client, with only the instructions related to the bot's 
+							movement, obstacle detectoion and camera being communicated to the server. This keeps the workload off the 700MHz processor of 
+							the RPi, leaving the majority of resource hungry tasks to the more capable machine of the client.
 						</p>
 					</div>
 					
@@ -225,12 +245,17 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="col-sm-7">
-						<h4>ANALYSIS OF VISUAL INPUTS</h4>
+						<h4>Optical sensing</h4>
 						<p>
-							TARS has a 5 megapixel camera, which is used to take pictures at regular intervals, during the robot's navigation, which are then
-							analyzed.
-							For example, on the AI mode, when TARS reaches the destination, the client compiles all the pictures, taken at points on the shortest path, 
-							and combines them to form a video representation of the path traversed by the robot.
+							TARS has a 5 megapixel camera, which is used to take pictures at regular intervals, during the robot's navigation.
+							These images are analyzed for a variety of purposes including identifying destination and compiling a video of the 
+							path.
+						</p>
+						<p>
+							Currently, We use Emmy award winning SSIM index algorithm to find similarities between two images that allows the bot
+							to recognize destination and possibly other objects in near future. 
+							Other algorith that TARS uses is K-means clustering machine learning algorthim that allows it to quantize colors in the images
+							into clusters, and then matching them with the target data.
 						</p>
 					</div>
 					
@@ -255,7 +280,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="wow bounceInLeft" data-wow-delay="0.1s">
-					<h2>Technologies and components used</h2>
+					<h2>Hardware and Thirdparty Software</h2>
 					</div>
 				</div>				
 			</div>
@@ -264,36 +289,35 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="col-sm-7">
-						<h4>Components of TARS</h4>
-							<p>1. Raspberry pi<br>
-							2. Robot kit- including framework with wheels, motor, motor controller board etc<br>
-							3. Ultrasonic sensor<br>
-							4. 5 MP Camera							
+						<h4>TARS is built using :</h4>
+							<ul><p>
+							<li>Raspberry Pi : model B 512MB RAM
+							<li>Custom metal chassis
+							<li>2 Plastic tracked wheels: 67 x 26 mm
+							<li>1 Metallic castor wheel	
+							<li>2 DC Battery Operated motors
+							<li>DNY power bank : 2 USB outputs
+							<li>HC-SR04 ultrasonic sensor : 2 - 500 cm resolution
+							<li>5MP camera
+							<li>Voltage divider circuit							
+							</p></ul>							
+					</div>
+			
+					<div class="col-sm-5">
+						<h4>Software dependencies</h4>
+							<ul><p>
+							<li>Language : Python
+							<li>Server OS compatibility: Linux / Debian
+							<li>Client OS compatibility: Linux, Windows
+							<li>Pygame : Radar
+							<li>easygui : GUI menus
+							<li>scikit-learn : Image analysis
 							
-							</p>
-							
+							</p></ul>
 					</div>
 				</div>				
-			</div>
-			
-			<div class="row-padded" id="technologies"></div>
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div class="col-sm-7">
-						<h4>Technologies Used</h4>
-							<p>1. Language : Python<br>
-							2. Server OS : Debian/Linux<br>
-							3. Client OS : Linux/Windows<br>
-							4. Third party : pygame, easyGUI, RPi.GPIO 
-						
-							</p>
-					</div>
-				</div>				
-			</div>
-			
-			
+			</div>			
 		</div>
-	
 	</section>
 	
 	
@@ -303,41 +327,26 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="wow bounceInLeft" data-wow-delay="0.1s">
-					<h2>Get in touch</h2>
+					<h2>About us</h2>
 					</div>
 					<div class="col-sm-8">
-						<form class="my-form" role="form" action="MAILTO:niharika.dutta91@gmail.com" method="post" enctype="text/plain">
-						  <div class="form-group">
-							<input type="text" class="form-control" id="name" placeholder="Your name">
-						  </div>
-						  <div class="form-group">
-							<input type="email" class="form-control" id="email" placeholder="Your mail">
-						  </div>
-						  <div class="form-group">
-							<textarea class="form-control" name="message" id="message" rows="7" cols="25" style="resize:none;" required="required" placeholder="Message"></textarea>
-						  </div>
-						  
-						  <button type="submit" class="btn btn-default btn-block">SEND MESSAGE</button>
-						</form>
-					</div>
+					<p>For any query, feel free to contact us at :-</p>
+				
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="col-sm-7">
+									<p>Niharika Dutta:<br>
+									Email: <a href="mailto:info@example.com">niharika.dutta91@gmail.com</a><br>
+									<a href="https://github.com/Niharikadutta">Github profile</a><br>
+									<a href="https://in.linkedin.com/pub/niharika-dutta/54/929/161">Linkedin profile</a></p>
+									</div>
+								<div class="col-sm-5">
+									<p>Abhimanyu Dogra: <br>
+									Email: <a href="mailto:info@example.com">dograabhimanyu@gmail.com</a><br>
+									<a href="https://github.com/abhimanyudogra">Github profile</a><br>
+									<a href="https://in.linkedin.com/in/abhimanyudogra">Linkedin profile</a></p>
+								</div>
+							</div>
 					
-					<div class="col-sm-4">
-						<div class="physical-address">
-						<h4>Contact us</h4>
-						<p>We are two computer science graduates with interest in Artificial Intelligence, Machine learning and Deep learning. This is a side project driven by curiosity. For any query, feel free to contact us at :-</p>
-						<br>
-
-						<address>
-						  Niharika Dutta: <br>
-						  Email: <a href="mailto:info@example.com">niharika.dutta91@gmail.com</a><br>
-						  Github profile: <a href="https://github.com/Niharikadutta">Niharikadutta</a><br><br>
-						  Abhimanyu Dogra: <br>
-						  Email: <a href="mailto:info@example.com">dograabhimanyu@gmail.com</a><br>
-						  Github profile: <a href="https://github.com/abhimanyudogra">abhimanyudogra</a><br>
-						  Website: <a href="http://abhimanyudogra.github.io/">Abhimanyu's Lair</a>
-						</address>	
-						</div>
-					</div>
 				</div>				
 			</div>
 		</div>
